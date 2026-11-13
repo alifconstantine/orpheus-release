@@ -2,16 +2,25 @@
 
 Public release distribution repository for **Orpheus** — a cross-platform YouTube Music & audio player built with Kotlin and Compose Multiplatform.
 
-> Source code is maintained in a separate private repository. This repository hosts official compiled builds, release notes, and public distribution assets.
+> Source code is maintained in a separate private repository. This repository hosts official compiled builds, release notes, and public distribution assets consumed by both Orpheus auto-updates and the official web download portal (`orpheus-web`).
 
 ## Download
 
 - **Latest Release:** [github.com/alifconstantine/orpheus-release/releases/latest](https://github.com/alifconstantine/orpheus-release/releases/latest)
 - **All Releases:** [github.com/alifconstantine/orpheus-release/releases](https://github.com/alifconstantine/orpheus-release/releases)
 
-## In-App Update Endpoint
+## Included Targets per Release
 
-The Orpheus application checks for new versions via the public GitHub Releases API:
+- **Desktop (Windows x64):** `Orpheus-Windows-installer.zip` (`.msix` + installer script)
+- **Desktop (macOS Apple Silicon / Intel):** `.dmg`
+- **Desktop (Linux x86_64):** `.AppImage`
+- **Android (`full`, `foss`, `vivo`):** `.apk`
+
+Desktop installers are **Packaged with Conveyor** ([hydraulic.dev](https://hydraulic.dev)).
+
+## In-App Update & Web Endpoint
+
+Both the Orpheus application update checker and the web download portal fetch release metadata from the public GitHub Releases API:
 
 ```text
 https://api.github.com/repos/alifconstantine/orpheus-release/releases/latest
@@ -20,4 +29,4 @@ https://api.github.com/repos/alifconstantine/orpheus-release/releases/latest
 ## Release Versioning
 
 - Versioning follows Semantic Versioning prefixed with `v` (starting from `v1.0.0`).
-- Each release includes build artifacts (e.g., Android `.apk` / Desktop installers) and release notes.
+- Each GitHub Release publishes platform installers, APKs, and release notes directly under this repository's Releases tab.
