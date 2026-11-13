@@ -11,12 +11,10 @@ Public release distribution repository for **Orpheus** — a cross-platform YouT
 
 ## Included Targets per Release
 
-- **Desktop (Windows x64):** `Orpheus-Windows-installer.zip` (`.msix` + installer script)
-- **Desktop (macOS Apple Silicon / Intel):** `.dmg`
-- **Desktop (Linux x86_64):** `.AppImage`
-- **Android (`full`, `foss`, `vivo`):** `.apk`
-
-Desktop installers are **Packaged with Conveyor** ([hydraulic.dev](https://hydraulic.dev)).
+- **Desktop (Windows x64):** `.exe` installer (Inno Setup; also compatible with Windows 11 ARM via Prism x64 emulation)
+- **Desktop (macOS Apple Silicon / Intel):** `.dmg` *(coming soon)*
+- **Desktop (Linux x86_64):** `.deb` (`sudo apt install`) & `.AppImage` *(coming soon)*
+- **Android:** Universal `.apk` (Android 8.0+)
 
 ## In-App Update & Web Endpoint
 
